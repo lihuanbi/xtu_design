@@ -1,0 +1,42 @@
+{
+  "pages": [
+    "pages/tar_other/tar_other",
+    "pages/index/index",
+    "pages/userConsole/userConsole",
+    "pages/storageConsole/storageConsole",
+    "pages/databaseGuide/databaseGuide",
+    "pages/addFunction/addFunction",
+    "pages/deployFunctions/deployFunctions",
+    "pages/chooseLib/schooseLib",
+    "pages/openapi/openapi",
+    "pages/openapi/serverapi/serverapi",
+    "pages/openapi/callback/callback",
+    "pages/openapi/cloudid/cloudid",
+    "pages/im/im",
+    "pages/im/room/room"
+    
+  ],
+  "window": {
+    "backgroundColor": "#FFFFFF",
+    "navigationBarBackgroundColor": "#00BBFF",
+    "navigationBarTitleText": "林瑞全的小程序",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh":true,
+    "backgroundTextStyle": "dark"
+  },
+  "tabBar": {
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "首页",
+      "iconPath":"images/tar_head_01.png",
+      "selectedIconPath":"images/tar_head_02.png"
+    }, {
+      "pagePath": "pages/tar_other/tar_other",
+      "text": "日志",
+      "iconPath":"images/tar_other_01.png",
+      "selectedIconPath":"images/tar_other_02.png"
+    }]
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2"
+}
