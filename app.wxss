@@ -1,0 +1,90 @@
+/**app.wxss**/
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+} 
+.nav{
+width: 100%;
+ overflow: hidden; 
+position: relative;
+top: 0;
+left: 0;
+z-index:10;
+
+}
+.nav-title{
+  width: 100%;
+  height: 45px;
+  line-height: 45px;
+
+  text-align: center;
+  position:relative;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  /* font-family:仿宋; */
+  font-size: 36rpx;
+  letter-spacing: 2px;
+}
+
+.nav .back{
+  width: 22px;
+  height: 22px;
+  position: absolute;
+  bottom: 0; 
+  left: 0; 
+  padding: 10px 15px;
+}
+
+.nav-bg{
+  background-color:rgb(16, 153, 216);
+}
+.bg-gray{
+  background-color: #f7f7f7;
+}
+.overflow{
+  overflow: auto;
+}
+.hidden{
+  overflow: hidden;
+}
+.ini{
+width:60%;
+height:30px;
+background:rgba(255,255,255,1);
+
+border-radius:30px;
+font-size: 14px;
+/* margin-top: 27px; */
+position: relative;
+float: left;
+margin-left:12px;
+}
+
+.inisearch{
+  position: absolute;
+  left: 23px;
+}
+
+.w-input{
+height: 30px;
+line-height: 30px;
+
+text-align: left;
+padding-left: 30px;
+letter-spacing: 0;
+
+/* position: absolute;
+margin-top: 0; */
+}
+
+.INtab{
+  text-align: left;
+  margin-left: 12px;
+  color: #fff;
+}

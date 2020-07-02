@@ -1,0 +1,32 @@
+<!--pages/active/active.wxml-->
+
+<view>
+<!-- 头部搜索栏 -->
+<view class="nav nav-bg" style="height:{{navH}}px">
+  <view class="nav-title">
+    <view class="ini" style="margin-top:calc({{navH}}*0.37px)"> 
+      <icon class="inisearch" type="search" size="12"/>
+      <input class="w-input" placeholder="搜索活动"/>
+     </view>
+    </view>
+  </view>
+ <scroll-view class='bg-gray overflow' style='height:calc(100vh-{{navH}}px)' scroll-y >
+    <view class='hidden'>
+    </view>
+ </scroll-view>
+</view>
+
+<view class="containeractive">
+<block wx:for='{{news}}' wx:key='id'>
+<view class="newsitem">
+   <view class="news-text">
+     <text class='title'>{{item.title}}</text>
+     <view class= 'bottext'>  
+     <text class='author'>{{item.author}}</text>  
+     <text class='date'>{{item.date}}</text>    
+     </view>
+   </view>
+     <image src='{{item.imgurl}}' class="img"></image>
+ </view>
+</block>
+</view>
