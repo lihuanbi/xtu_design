@@ -16,17 +16,77 @@
  </scroll-view>
 </view>
 
+<!-- 主盒子 -->
 <view class="containeractive">
-<block wx:for='{{news}}' wx:key='id'>
-<view class="newsitem">
-   <view class="news-text">
+<view class='nav_left' style="top:calc({{navH}}px)">
+    <view class="nav_left_items {{ids == 1 ? 'active' : ''}}" 
+          bindtap="switchRightTab"  data-id="1">
+      体育
+    </view>
+    <view class="nav_left_items {{ids == 2 ? 'active' : ''}}" 
+          bindtap="switchRightTab"  data-id="2">
+      文艺
+    </view>
+    <view class="nav_left_items {{ids == 3 ? 'active' : ''}}" 
+          bindtap="switchRightTab" data-id="3">
+      学科竞赛
+    </view>
+    <view class="nav_left_items {{ids == 4 ? 'active' : ''}}" 
+          bindtap="switchRightTab" data-id="4">
+      各种讲座
+    </view>
+    <view class="nav_left_items {{ids == 5 ? 'active' : ''}}" 
+          bindtap="switchRightTab" data-id="5">
+      公益活动
+    </view>
+    <view class="nav_left_items {{ids == 6 ? 'active' : ''}}" 
+          bindtap="switchRightTab" data-id="6">
+      其他
+    </view>
+  </view>
+
+<!-- 下边的列表 -->
+<view class="nav_buttom">
+<block wx:for='{{news1}}' wx:key='id' wx:if="{{ids==1}}">
+<view class="newsitem"  style="top:calc({{navH}}*0.8px)" >
+     <image src='{{item.imgurl}}' class="img"></image>
+     <view class="news-text">
      <text class='title'>{{item.title}}</text>
      <view class= 'bottext'>  
      <text class='author'>{{item.author}}</text>  
+     <text class='place'>{{item.place}}</text> 
      <text class='date'>{{item.date}}</text>    
      </view>
    </view>
-     <image src='{{item.imgurl}}' class="img"></image>
  </view>
 </block>
+
+<block wx:for='{{news2}}' wx:key='id' wx:if="{{ids==2}}">
+<view class="newsitem"  style="top:calc({{navH}}*0.8px)" >
+     <image src='{{item.imgurl}}' class="img"></image>
+     <view class="news-text">
+     <text class='title'>{{item.title}}</text>
+     <view class= 'bottext'>  
+     <text class='author'>{{item.author}}</text>  
+     <text class='place'>{{item.place}}</text> 
+     <text class='date'>{{item.date}}</text>    
+     </view>
+   </view>
+ </view>
+</block>
+
+<block wx:for='{{news3}}' wx:key='id' wx:if="{{ids==3}}">
+<view class="newsitem"  style="top:calc({{navH}}*0.8px)" >
+     <image src='{{item.imgurl}}' class="img"></image>
+     <view class="news-text">
+     <text class='title'>{{item.title}}</text>
+     <view class= 'bottext'>  
+     <text class='author'>{{item.author}}</text>  
+     <text class='place'>{{item.place}}</text> 
+     <text class='date'>{{item.date}}</text>    
+     </view>
+   </view>
+ </view>
+</block>
+</view>
 </view>

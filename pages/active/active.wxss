@@ -8,41 +8,97 @@
   /* padding: 200rpx 0; */
   box-sizing: border-box;
 } 
+/* .bg-gray{
+  position: relative;
+} */
+
+.nav_left{  
+  position:absolute;    
+  top:0px;              
+  left:0px;         
+  width:20%;        
+  height: 100%;
+  background: #f5f5f5; 
+  text-align: center;  
+}
+/* 左侧栏的每个item */  
+.nav_left .nav_left_items{  
+  height: 40px;     
+  padding: 6px 0;   
+  border-bottom: 1px solid #dedede;   
+  font-size: 14px;  
+} 
+/* 左侧栏list的item被选中时*/  
+.nav_left .nav_left_items.active{ 
+  background: #fff;  
+  color: #3385ff; 
+  border-left: 3px solid #3385ff;  
+}
+/* 下盒子 */  
+.nav_buttom{  
+  position:relative;  
+  /* top: 30px;        */
+  left: 22%;    
+  width: 100%;    
+
+  box-sizing: border-box;  /* 为元素指定的任何内边距和边框都将在已设定的宽度和高度内进行绘制*/
+  background: #fff;        /* 右侧主盒子背景颜色 */
+}
+
 .title{
   width: 90%;
 }
 
 .newsitem{
- width: 95%;
- height: 230rpx;
+ width: 75%;
+ height: 280rpx;
  display: flex;
  flex-direction: row;
- margin: 10rpx;
- border: 2rpx solid rebeccapurple
+ margin: 5rpx;
+ border: 2rpx solid rebeccapurple;
+ position: relative;
 }
 
 .img{
- width: 260rpx;
- height: 200rpx;
+ width: 80%;
+ height: 240rpx;
  padding: 20rpx;
  float: right;
  margin-right: 0;
 }
 
 .news-text{
- display: flex;
- width: 65%;
- flex-direction: column;
+display: flex; 
+ width: 95%;
+ flex-direction: column; 
  padding: 20rpx;
+ position: relative;
 }
 
 .bottext{
  width: 100%;
  height: 200rpx;
- display: flex;
- align-items: flex-end;
+ margin-top: 20%;
+/* display: flex;
+ align-items: flex-end;  */
  font-size: 30rpx;
+ position: relative;
 }
 .author{
+  width: 100%;
  margin-right: 30rpx;
+ padding-right: 60%;
+
+}
+.place{
+  width: 100%;
+  position: relative;
+  top: 5px;
+  /* padding-right: 60%;  */
+}
+.date{
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
