@@ -74,114 +74,152 @@ Page({
     {
       id:4,
      // idm:2,
-      title: '第4条新闻',
-      imgurl: 'img/4.jpg',
-      author: '王三',
-      place:'北山',
-      date: '2019-6-25 10:10'
+     title: '女生节',
+     imgurl: 'img/1-2.png',
+     author: '李四',
+     place:'二田运动',
+     date: '2019-6-25 10:10'
     },
     {
       id:5,
       //idm:1,
-      title: '第二条新闻',
-      imgurl: 'img/4.jpg',
-      author: '李四',
-      place:'二田运动',
-      date: '2019-6-25 10:10'
+      title:'巧遇Love',
+      imgurl:'img/1-1.png',
+      author:'三翼工作室',
+      place:'一田活动中心',
+      date:'2019-2-14 20:08'
     },
     {
       id:6,
       //idm:1,
-      title: '第二条新闻',
-      imgurl: 'img/4.jpg',
-      author: '李四',
-      place:'二田运动',
-      date: '2019-6-25 10:10'
+      title: '可瓦狂欢之夜',
+      imgurl: 'img/1-3.png',
+      author: '青媒体中心',
+      place:'一田活动中心',
+      date: '2019-7-5 20:10'
     },
     {
       id:7,
       //idm:1,
-      title: '第二条新闻',
-      imgurl: 'img/4.jpg',
-      author: '李四',
-      place:'二田运动',
-      date: '2019-6-25 10:10'
+      title:'巧遇Love',
+      imgurl:'img/1-1.png',
+      author:'三翼工作室',
+      place:'一田活动中心',
+      date:'2019-2-14 20:08'
     },
   ],
 
   news2:[{
-    id:5,
-    //idm:1,
-    title:'文艺',
-    imgurl:'img/8.jpg',
-    author:'张三',
-    place:'南山',
-    date:'2019-6-27 20:08'
-  },
-  {
-    id:6,
-    //idm:1,
-    title: '第二条新闻',
-    imgurl: 'img/22.jpg',
-    author: '李四',
-    place:'二田运动',
-    date: '2019-6-25 10:10'
-  },
-  {
-    id:7,
-    //idm:1,
-    title: '第3条新闻',
-    imgurl: 'img/28.jpg',
-    author: '王三',
-    place:'北山',
-    date: '2019-6-25 10:10'
-  },
-  {
     id:8,
-   // idm:2,
-    title: '第4条新闻',
-    imgurl: 'img/4.jpg',
+    //idm:1,
+    title:'湘大诗词大会',
+    imgurl:'img/2-1.png',
+    author:'张三',
+    place:'图书馆一号报告厅',
+    date:'2020-6-27 20:00'
+  },
+  {
+    id:9,
+    //idm:1,
+    title: '优秀毕业作品征集',
+    imgurl: 'img/2-2.png',
+    author: '李四',
+    place:'图书馆前坪',
+    date: '2019-7-25 10:10'
+  },
+  {
+    id:10,
+    //idm:1,
+    title: '草莓音乐节',
+    imgurl: 'img/2-4.png',
     author: '王三',
-    place:'北山',
-    date: '2019-6-25 10:10'
+    place:'俱乐部',
+    date: '2020-11-8~11-10 10:10'
+  },
+  {
+    id:11,
+   // idm:2,
+   title:'湘大诗词大会',
+    imgurl:'img/2-1.png',
+    author:'张三',
+    place:'图书馆一号报告厅',
+    date:'2020-6-27 20:00'
   }
 ],
 
 news3:[{
-  id:9,
-  //idm:1,
-  title:'竞赛',
-  imgurl:'img/4.jpg',
-  author:'张三',
-  place:'南山',
-  date:'2019-6-27 20:08'
-},
-{
-  id:10,
-  //idm:1,
-  title: '第二条新闻',
-  imgurl: 'img/28.jpg',
-  author: '李四',
-  place:'二田运动',
-  date: '2019-6-25 10:10'
-},
-{
-  id:11,
-  //idm:1,
-  title: '第3条新闻',
-  imgurl: 'img/8.jpg',
-  author: '王三',
-  place:'北山',
-  date: '2019-6-25 10:10'
-},
-{
   id:12,
+  //idm:1,
+  title: '优秀毕业作品征集',
+    imgurl: 'img/2-2.png',
+    author: '李四',
+    place:'图书馆前坪',
+    date: '2019-7-25 10:10'
+},
+{
+  id:13,
+  //idm:1,
+  title: '优秀毕业作品征集',
+  imgurl: 'img/2-2.png',
+  author: '李四',
+  place:'图书馆前坪',
+  date: '2019-7-25 10:10'
+},
+{
+  id:14,
+  //idm:1,
+  title: '优秀毕业作品征集',
+    imgurl: 'img/2-2.png',
+    author: '李四',
+    place:'图书馆前坪',
+    date: '2019-7-25 10:10'
+},
+{
+  id:15,
  // idm:2,
-  title: '第4条新闻',
-  imgurl: 'img/4.jpg',
-  author: '王三',
-  place:'北山',
-  date: '2019-6-25 10:10'
+ title: '优秀毕业作品征集',
+ imgurl: 'img/2-2.png',
+ author: '李四',
+ place:'图书馆前坪',
+ date: '2019-7-25 10:10'
+}
+],
+
+news4:[{
+  id:16,
+  //idm:1,
+  title:'全球水源峰会',
+  imgurl:'img/4-1.png',
+  author:'张三',
+  place:'逸夫楼一阶梯教室',
+  date:'2020-8-1 10:00'
+},
+{
+  id:17,
+  //idm:1,
+  title:'全球水源峰会',
+  imgurl:'img/4-1.png',
+  author:'张三',
+  place:'逸夫楼一阶梯教室',
+  date:'2020-8-1 10:00'
+},
+{
+  id:18,
+  //idm:1,
+  title:'全球水源峰会',
+  imgurl:'img/4-1.png',
+  author:'张三',
+  place:'逸夫楼一阶梯教室',
+  date:'2020-8-1 10:00'
+},
+{
+  id:19,
+ // idm:2,
+ title:'全球水源峰会',
+ imgurl:'img/4-1.png',
+ author:'张三',
+ place:'逸夫楼一阶梯教室',
+ date:'2020-8-1 10:00'
 }
 ]
   },

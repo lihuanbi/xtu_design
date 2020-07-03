@@ -92,7 +92,32 @@
 </view>
  </view>
 </block>
+
 <block wx:for='{{news3}}' wx:key='id' wx:if="{{ids==3}}">
+<view class="newsitem"  style="top:calc({{navH}}*0.8px)" catchtap="getnews" data-newsId="{{item.id}}">
+<view class="imag">
+     <image src='{{item.imgurl}}' class="img"></image>
+</view>
+
+<view class="news-text">
+     <text class='title'>{{item.title}}</text>
+
+     <view class= 'bottext'>  
+     <view class="authup">
+     <!-- <text class='author'>{{item.author}}</text>   -->
+     <text class='place'>{{item.place}}</text> 
+    </view>
+     <view class="auth">
+     <text class='date'> {{item.date}}</text>    
+     </view>
+  
+     </view>
+</view>
+ </view>
+</block>
+
+
+<block wx:for='{{news4}}' wx:key='id' wx:if="{{ids==4}}">
 <view class="newsitem"  style="top:calc({{navH}}*0.8px)" catchtap="getnews" data-newsId="{{item.id}}">
 <view class="imag">
      <image src='{{item.imgurl}}' class="img"></image>
