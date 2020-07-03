@@ -18,7 +18,7 @@
 
 <!-- 主盒子 -->
 <view class="containeractive">
-<view class='nav_left' style="top:calc({{navH}}px)">
+<view class='nav_left' style="top:calc({{navH}}*1.16px)">
     <view class="nav_left_items {{ids == 1 ? 'active' : ''}}" 
           bindtap="switchRightTab"  data-id="1">
       体育
@@ -48,45 +48,76 @@
 <!-- 下边的列表 -->
 <view class="nav_buttom">
 <block wx:for='{{news1}}' wx:key='id' wx:if="{{ids==1}}">
-<view class="newsitem"  style="top:calc({{navH}}*0.8px)" >
+<view class="newsitem"  style="top:calc({{navH}}*0.8px)" catchtap="getnews" data-newsId="{{item.id}}">
+<view class="imag">
      <image src='{{item.imgurl}}' class="img"></image>
-     <view class="news-text">
+</view>
+
+<view class="news-text">
      <text class='title'>{{item.title}}</text>
+
      <view class= 'bottext'>  
-     <text class='author'>{{item.author}}</text>  
+     <view class="authup">
+     <!-- <text class='author'>{{item.author}}</text>   -->
      <text class='place'>{{item.place}}</text> 
-     <text class='date'>{{item.date}}</text>    
+    </view>
+     <view class="auth">
+     <text class='date'> {{item.date}}</text>    
      </view>
-   </view>
+  
+     </view>
+</view>
  </view>
 </block>
 
 <block wx:for='{{news2}}' wx:key='id' wx:if="{{ids==2}}">
-<view class="newsitem"  style="top:calc({{navH}}*0.8px)" >
+<view class="newsitem"  style="top:calc({{navH}}*0.8px)" catchtap="getnews" data-newsId="{{item.id}}">
+<view class="imag">
      <image src='{{item.imgurl}}' class="img"></image>
-     <view class="news-text">
+</view>
+
+<view class="news-text">
      <text class='title'>{{item.title}}</text>
+
      <view class= 'bottext'>  
-     <text class='author'>{{item.author}}</text>  
+     <view class="authup">
+     <!-- <text class='author'>{{item.author}}</text>   -->
      <text class='place'>{{item.place}}</text> 
-     <text class='date'>{{item.date}}</text>    
+    </view>
+     <view class="auth">
+     <text class='date'> {{item.date}}</text>    
      </view>
-   </view>
+  
+     </view>
+</view>
  </view>
 </block>
-
 <block wx:for='{{news3}}' wx:key='id' wx:if="{{ids==3}}">
-<view class="newsitem"  style="top:calc({{navH}}*0.8px)" >
+<view class="newsitem"  style="top:calc({{navH}}*0.8px)" catchtap="getnews" data-newsId="{{item.id}}">
+<view class="imag">
      <image src='{{item.imgurl}}' class="img"></image>
-     <view class="news-text">
+</view>
+
+<view class="news-text">
      <text class='title'>{{item.title}}</text>
+
      <view class= 'bottext'>  
-     <text class='author'>{{item.author}}</text>  
+     <view class="authup">
+     <!-- <text class='author'>{{item.author}}</text>   -->
      <text class='place'>{{item.place}}</text> 
-     <text class='date'>{{item.date}}</text>    
+    </view>
+     <view class="auth">
+     <text class='date'> {{item.date}}</text>    
      </view>
-   </view>
+  
+     </view>
+</view>
  </view>
 </block>
 </view>
+<!-- 回到顶部 -->
+
+<image src='img/00.jpg' class='goTop' hidden='{{!floorstatus}}' bindtap="goTop"></image>
+
+
 </view>

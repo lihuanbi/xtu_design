@@ -2,7 +2,7 @@
   "pages":[
     "pages/active/active",
     "pages/index/index",
-    
+    "pages/view/view",
     "pages/logs/logs"
   ],
   "window":{
