@@ -21,7 +21,7 @@
 <view class='nav_left' style="top:calc({{navH}}*1.16px)">
     <view class="nav_left_items {{ids == 1 ? 'active' : ''}}" 
           bindtap="switchRightTab"  data-id="1">
-      体育
+      娱乐
     </view>
     <view class="nav_left_items {{ids == 2 ? 'active' : ''}}" 
           bindtap="switchRightTab"  data-id="2">
@@ -117,7 +117,7 @@
 </view>
 <!-- 回到顶部 -->
 
-<image src='img/00.jpg' class='goTop' hidden='{{!floorstatus}}' bindtap="goTop"></image>
+<image src='img/000.png' class='goTop' hidden='{{!floorstatus}}' bindtap="goTop"></image>
 
 
 </view>

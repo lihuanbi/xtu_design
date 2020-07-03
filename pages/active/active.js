@@ -47,17 +47,17 @@ Page({
     news1:[{
       id:1,
       //idm:1,
-      title:'迷你马拉松',
-      imgurl:'img/1.jpg',
+      title:'巧遇Love',
+      imgurl:'img/1-1.png',
       author:'三翼工作室',
       place:'一田活动中心',
-      date:'2019-6-27 20:08'
+      date:'2019-2-14 20:08'
     },
     {
       id:2,
       //idm:1,
-      title: '第二条新闻',
-      imgurl: 'img/4.jpg',
+      title: '女生节',
+      imgurl: 'img/1-2.png',
       author: '李四',
       place:'二田运动',
       date: '2019-6-25 10:10'
@@ -65,11 +65,11 @@ Page({
     {
       id:3,
       //idm:1,
-      title: '第3条新闻',
-      imgurl: 'img/1.jpg',
-      author: '王三',
-      place:'北山',
-      date: '2019-6-25 10:10'
+      title: '可瓦狂欢之夜',
+      imgurl: 'img/1-3.png',
+      author: '青媒体中心',
+      place:'一田活动中心',
+      date: '2019-7-5 20:10'
     },
     {
       id:4,
