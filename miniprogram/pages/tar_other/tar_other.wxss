@@ -1,1 +1,5 @@
 /* pages/tar_other/tar_other.wxss */
+.turnbutton{
+  padding: 20rpx;
+  margin: 20rpx;
+}

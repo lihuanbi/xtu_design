@@ -1,5 +1,7 @@
 {
   "pages": [
+    "pages/month_calendar/month_calendar",
+    "pages/date_html/date_html",
     "pages/tar_other/tar_other",
     "pages/index/index",
     "pages/userConsole/userConsole",
@@ -33,6 +35,16 @@
     }, {
       "pagePath": "pages/tar_other/tar_other",
       "text": "日志",
+      "iconPath":"images/tar_other_01.png",
+      "selectedIconPath":"images/tar_other_02.png"
+    },{
+      "pagePath": "pages/date_html/date_html",
+      "text": "日期活动",
+      "iconPath":"images/tar_other_01.png",
+      "selectedIconPath":"images/tar_other_02.png"
+    },{
+      "pagePath": "pages/month_calendar/month_calendar",
+      "text": "月份日历",
       "iconPath":"images/tar_other_01.png",
       "selectedIconPath":"images/tar_other_02.png"
     }]

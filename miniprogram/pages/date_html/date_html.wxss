@@ -1,0 +1,38 @@
+/* pages/date_html/date_html.wxss */
+
+.container{
+height: 100%;
+display: flex;
+flex-direction: row;
+align-items: flex-start; 
+justify-content: flex-start;
+}
+
+.left-container{
+  background-color:white;
+  height: 456px;
+  width: 150rpx;
+}
+
+.right-container{
+  background-color:white;
+  height: 456px;
+  width: 100%;
+}
+
+.datenum{
+  height: 150rpx;
+  background-color:DeepSkyBlue;
+  border: grey solid 1rpx;
+  text-align: center;
+  line-height: 150rpx;
+
+}
+
+.datenum_current{
+  height: 150rpx;
+  background-color:rgb(255, 255, 255);
+  border:white solid 5rpx;
+  text-align: center;
+  line-height: 150rpx;
+}

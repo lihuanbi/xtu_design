@@ -1,13 +1,12 @@
 // pages/tar_other/tar_other.js
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-      num:1,
+     
   },
-  
-  
-
+//跳转到日历页面
+  toDate(e){
+    wx.reLaunch({
+      url: '../date_html/date_html'
+    })    
+  }  
 })
