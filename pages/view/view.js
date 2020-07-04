@@ -1,12 +1,12 @@
 // pages/view/view.js
-var postsData = require('../active/active.js');
+var postsData = require('./data.js');
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    // newsData: postsData.tsdata,
   },
 
   /**
@@ -14,7 +14,9 @@ Page({
    */
   onLoad: function (options) {
     var newsId = options.id;
-    var newsData = postsData.news1[newsId];
+    var contentactive=[];
+    var newsData = postsData.tsdata[newsId-1];
+    console.log(newsData);
      this.setData({
       newsData:newsData,
      });

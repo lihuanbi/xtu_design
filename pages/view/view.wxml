@@ -1,5 +1,9 @@
 <!--pages/view/view.wxml-->
 <text>详情</text>
 <view class="container">
-<text>{{newsData.id}}</text>
+
+<scroll-view class="thetext" scroll-y>
+{{newsData.scArr}}
+</scroll-view>
+
 </view>

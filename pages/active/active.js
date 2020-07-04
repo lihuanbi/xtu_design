@@ -7,7 +7,7 @@ Page({
     var idx = event.currentTarget.dataset.newsid;
     console.log(idx);    // 新闻url 
      wx.navigateTo({
-      // url: "../view/view?id=" + idx
+       url: "../view/view?id=" + idx
      });
   },
 

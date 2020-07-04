@@ -1,1 +1,4 @@
 /* pages/view/view.wxss */
+.thetext{
+  height: 200px;
+}
