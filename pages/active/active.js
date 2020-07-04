@@ -1,11 +1,13 @@
 // pages/active/active.js
+
 const App = getApp();
 Page({
   getnews:function(event){
     // console.log("outer view bindtap")
     console.log(event);
     var idx = event.currentTarget.dataset.newsid;
-    console.log(idx);    // 新闻url 
+       // 新闻url 
+    console.log(idx); 
      wx.navigateTo({
         url: "../view/view?id=" + idx
      });
@@ -100,6 +102,7 @@ Page({
     },
     {
       id:7,
+      idm:1,
       //idm:1,
       title:'巧遇Love',
       imgurl:'img/1-1.png',
@@ -111,6 +114,7 @@ Page({
 
   news2:[{
     id:8,
+    idm:4,
     //idm:1,
     title:'湘大诗词大会',
     imgurl:'img/2-1.png',
@@ -120,7 +124,7 @@ Page({
   },
   {
     id:9,
-    //idm:1,
+    idm:5,
     title: '优秀毕业作品征集',
     imgurl: 'img/2-2.png',
     author: '李四',
@@ -129,16 +133,16 @@ Page({
   },
   {
     id:10,
-    //idm:1,
+    idm:6,
     title: '草莓音乐节',
     imgurl: 'img/2-4.png',
     author: '王三',
     place:'俱乐部',
-    date: '2020-11-8~11-10 10:10'
+    date: '2020-11-10 10:10'
   },
   {
     id:11,
-   // idm:2,
+   idm:4,
    title:'湘大诗词大会',
     imgurl:'img/2-1.png',
     author:'张三',
@@ -149,16 +153,16 @@ Page({
 
 news3:[{
   id:12,
-  //idm:1,
+  idm:5,
   title: '优秀毕业作品征集',
     imgurl: 'img/2-2.png',
     author: '李四',
     place:'图书馆前坪',
-    date: '2019-7-25 10:10'
+    date: '2020-7-25 10:10'
 },
 {
   id:13,
-  //idm:1,
+  idm:5,
   title: '优秀毕业作品征集',
   imgurl: 'img/2-2.png',
   author: '李四',
@@ -167,7 +171,7 @@ news3:[{
 },
 {
   id:14,
-  //idm:1,
+  idm:5,
   title: '优秀毕业作品征集',
     imgurl: 'img/2-2.png',
     author: '李四',
@@ -176,7 +180,7 @@ news3:[{
 },
 {
   id:15,
- // idm:2,
+  idm:5,
  title: '优秀毕业作品征集',
  imgurl: 'img/2-2.png',
  author: '李四',
@@ -187,7 +191,7 @@ news3:[{
 
 news4:[{
   id:16,
-  //idm:1,
+  idm:7,
   title:'全球水源峰会',
   imgurl:'img/4-1.png',
   author:'张三',
@@ -196,7 +200,7 @@ news4:[{
 },
 {
   id:17,
-  //idm:1,
+  idm:7,
   title:'全球水源峰会',
   imgurl:'img/4-1.png',
   author:'张三',
@@ -205,7 +209,7 @@ news4:[{
 },
 {
   id:18,
-  //idm:1,
+  idm:7,
   title:'全球水源峰会',
   imgurl:'img/4-1.png',
   author:'张三',
@@ -214,14 +218,35 @@ news4:[{
 },
 {
   id:19,
- // idm:2,
+  idm:7,
  title:'全球水源峰会',
  imgurl:'img/4-1.png',
  author:'张三',
  place:'逸夫楼一阶梯教室',
  date:'2020-8-1 10:00'
 }
-]
+],
+news5:[{
+  id:16,
+  idm:7,
+  title:'全球水源峰会',
+  imgurl:'img/4-1.png',
+  author:'张三',
+  place:'逸夫楼一阶梯教室',
+  date:'2020-8-1 10:00'
+},
+
+],
+news6:[{
+    id:10,
+    idm:6,
+    title: '草莓音乐节',
+    imgurl: 'img/2-4.png',
+    author: '王三',
+    place:'俱乐部',
+    date: '2020-11-10 10:10'
+}]
+
   },
   switchRightTab:function(e){
     let id = e.target.dataset.id;
@@ -241,6 +266,8 @@ news4:[{
     this.setData({
       navH: App.globalData.navHeight
      });
+
+     
   },
 
   /**

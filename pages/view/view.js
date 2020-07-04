@@ -1,5 +1,5 @@
 // pages/view/view.js
-var postsData = require('./data.js');
+//var postsData = require('./data.js');
 Page({
   onPageScroll: function (e) {
     console.log(e)
@@ -37,21 +37,46 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
+
   onLoad: function (options) {
-    var newsId = options.id;
-    var contentactive=[];
-    var newsData = postsData.tsdata[newsId-1];
-    console.log(newsData);
-     this.setData({
-      newsData:newsData,
-     });
-     var thecontent = newsData.scArr[0];
+
+//  访问云数据库
+var db =wx.cloud.database();  
+var newsId = options.id;
+db.collection('tsArry').get({
+  success:res=>{
+    var postsData = res.data[newsId-1];
+    console.log(postsData);
+    this.setData({
+      postsData:postsData
+    }) 
+    console.log(postsData.scArr);
+  var thecontent = postsData.scArr;
+   console.log(thecontent);
+   this.setData({
+     thecontent:thecontent,
+  });
+},
+  fail:err =>{
+    console.error('fail',err);
+  }
+});
+    
+    // var newsId = options.id;
+    // var contentactive=[];
+    // var newsData = postsData.tsdata[newsId-1];
+    // console.log(newsData);
+    //  this.setData({
+    //   newsData:newsData,
+    //  });
+    //  var thecontent = newsData.scArr[0];
      
-     console.log(thecontent);
-     this.setData({
-      thecontent:thecontent,
-     });
+    //  console.log(thecontent);
+    //  this.setData({
+    //   thecontent:thecontent,
+    //  });
   },
+
 
   /**
    * 生命周期函数--监听页面初次渲染完成
