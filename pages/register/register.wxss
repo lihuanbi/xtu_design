@@ -1,0 +1,16 @@
+/* pages/login/login.wxss */
+input{
+  border: 1rpx solid #ccc;
+  width: 450rpx;
+  height: 100rpx;
+  border-radius:15rpx;
+  background-color: #dbdbdb;
+}
+.item{
+   height: 150rpx;
+   display:flex;                   
+   justify-content: center;
+}
+.center{
+  text-align: center;
+}

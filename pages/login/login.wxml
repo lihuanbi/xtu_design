@@ -1,0 +1,14 @@
+<!--pages/login/login.wxml-->
+<view class="avatar">
+  <image style="border-radius:50%" src="../../images/_mine.png" ></image>
+</view>
+<form>
+  <view class="item">
+  <input type="text" name="number" placeholder="学号" placeholder-class="center" bindinput="getNum"></input>
+  </view>
+   <view class="item">
+  <input type="text" name="password" password="true" placeholder="密码" placeholder-class="center" bindinput="getPwd"></input>
+  </view>
+  <button bindtap="register">注册</button>
+  <button type="primary" bindtap='login'>登录</button>
+</form>

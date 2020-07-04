@@ -1,0 +1,25 @@
+/* pages/login/login.wxss */
+input{
+  border: 1rpx solid #ccc;
+  width: 450rpx;
+  height: 100rpx;
+  border-radius:15rpx;
+  background-color: #dbdbdb;
+}
+.avatar{
+  display:flex;                   
+  justify-content: center;   
+  height: 400rpx;      
+ }
+ .avatar image { 
+   width:250rpx;
+   height:250rpx;
+ }
+.item{
+   height: 150rpx;
+   display:flex;                   
+   justify-content: center;
+}
+.center{
+  text-align: center;
+}
