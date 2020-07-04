@@ -55,9 +55,9 @@
 
   padding-bottom:2% ;
   letter-spacing:20rpx;
-    align-items: center;    /**子view垂直居中*/
-    vertical-align: center; /**垂直居中*/
-    justify-content: center; /**内容居中*/
+    align-items: center;    /*子view垂直居中*/
+    vertical-align: center; /*垂直居中*/
+    justify-content: center; /*内容居中*/
 }
 
 .newsitem{
@@ -136,12 +136,3 @@
   color: #868383;
 }
 
-.goTop{
-  height: 80rpx;
-  width: 80rpx;
-  position: fixed;
-  bottom: 90rpx;
-  background: rgba(0,0,0,.3);
-  right: 30rpx;
-  border-radius: 50%;
-}

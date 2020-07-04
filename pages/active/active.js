@@ -7,7 +7,7 @@ Page({
     var idx = event.currentTarget.dataset.newsid;
     console.log(idx);    // 新闻url 
      wx.navigateTo({
-       url: "../view/view?id=" + idx
+        url: "../view/view?id=" + idx
      });
   },
 
@@ -46,7 +46,7 @@ Page({
       ids:1,
     news1:[{
       id:1,
-      //idm:1,
+      idm:1,
       title:'巧遇Love',
       imgurl:'img/1-1.png',
       author:'三翼工作室',
@@ -55,7 +55,7 @@ Page({
     },
     {
       id:2,
-      //idm:1,
+      idm:2,
       title: '女生节',
       imgurl: 'img/1-2.png',
       author: '李四',
@@ -64,7 +64,7 @@ Page({
     },
     {
       id:3,
-      //idm:1,
+      idm:3,
       title: '可瓦狂欢之夜',
       imgurl: 'img/1-3.png',
       author: '青媒体中心',
@@ -73,7 +73,7 @@ Page({
     },
     {
       id:4,
-     // idm:2,
+     idm:2,
      title: '女生节',
      imgurl: 'img/1-2.png',
      author: '李四',
@@ -82,7 +82,7 @@ Page({
     },
     {
       id:5,
-      //idm:1,
+      idm:1,
       title:'巧遇Love',
       imgurl:'img/1-1.png',
       author:'三翼工作室',
@@ -91,7 +91,7 @@ Page({
     },
     {
       id:6,
-      //idm:1,
+      idm:3,
       title: '可瓦狂欢之夜',
       imgurl: 'img/1-3.png',
       author: '青媒体中心',
@@ -228,6 +228,9 @@ news4:[{
     console.log(id);
     this.setData({
       ids: id
+    })
+    wx.pageScrollTo({
+      scrollTop: 0
     })
   },
   /**

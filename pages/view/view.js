@@ -1,7 +1,32 @@
 // pages/view/view.js
 var postsData = require('./data.js');
 Page({
+  onPageScroll: function (e) {
+    console.log(e)
+    if (e.scrollTop > 100) {
+      this.setData({
+        floorstatus: true
+      });
+    } else {
+      this.setData({
+        floorstatus: false
+      });
+    }
+  },
 
+  //回到顶部
+  goTop: function (e) {  // 一键回到顶部
+    if (wx.pageScrollTo) {
+      wx.pageScrollTo({
+        scrollTop: 0
+      })
+    } else {
+      wx.showModal({
+        title: '提示',
+        content: '当前微信版本过低，无法使用该功能，请升级到最新微信版本后重试。'
+      })
+    }
+  },
   /**
    * 页面的初始数据
    */
@@ -19,6 +44,12 @@ Page({
     console.log(newsData);
      this.setData({
       newsData:newsData,
+     });
+     var thecontent = newsData.scArr[0];
+     
+     console.log(thecontent);
+     this.setData({
+      thecontent:thecontent,
      });
   },
 
