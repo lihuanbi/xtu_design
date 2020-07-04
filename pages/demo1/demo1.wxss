@@ -1,0 +1,6 @@
+image{
+  box-sizing:border-box;
+  border: 1px solid red;
+  width: 50rpx;
+  height: 50rpx;
+}

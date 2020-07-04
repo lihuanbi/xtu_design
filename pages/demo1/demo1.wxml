@@ -1,0 +1,8 @@
+
+<navigator url="/pages/index/index">主hhh页</navigator>
+<image src="/pages/index/image/上一页.png" /> 
+<view>
+<view>{{id}}</view>
+<button formType="button" class="search_btn" bindtap='last'>
+<image src="/pages/index/image/上一页.png" /> </button>
+</view>
