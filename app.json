@@ -1,0 +1,16 @@
+{
+  "pages": [
+    "pages/demo1/demo1",
+    "pages/index/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "“backgroundTexStyle": "black",
+    "navigationBarBackgroundColor": "#0080FF",
+    "navigationBarTitleText": "备忘录",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#0080FF",
+    "enablePullDownRefresh": true
+  },
+  "sitemapLocation": "sitemap.json"
+}

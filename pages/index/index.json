@@ -1,0 +1,5 @@
+{
+  "usingCoponents":{
+    "searchinput":"../../pages/searchinput/searchinput"
+  }
+}
