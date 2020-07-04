@@ -66,6 +66,7 @@ padding-right: 0.6rem;
   height: 60rpx;
   line-height: 60rpx;
   font-size: 26rpx;
+  /* background-color:red; */
 }
 .nowDay .date-head{
   width: 60rpx;
