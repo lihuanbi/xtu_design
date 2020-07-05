@@ -12,6 +12,11 @@ Page({
         url: "../view/view?id=" + idx
      });
   },
+  // suo: function (e){
+  //   wx.navigateTo({
+  //    url: '../view/view',
+  //   })
+  //   },
 
   // 获取滚动条当前位置
   onPageScroll: function (e) {
@@ -27,6 +32,17 @@ Page({
     }
   },
 
+  collect:function(e){
+    var coid = e.currentTarget.dataset.newsid;
+    console.log(coid);
+    var tid =e.currentTarget.dataset.newsid;
+    this.setData({
+      tid: tid
+    })
+    wx.navigateTo({
+       url: "../text/text?id=" + coid
+   });
+  },
   //回到顶部
   goTop: function (e) {  // 一键回到顶部
     if (wx.pageScrollTo) {
@@ -46,6 +62,7 @@ Page({
   
   data: {
       ids:1,
+      tid:0,
     news1:[{
       id:1,
       idm:1,
@@ -58,6 +75,7 @@ Page({
     {
       id:2,
       idm:2,
+
       title: '女生节',
       imgurl: 'img/1-2.png',
       author: '李四',
@@ -250,9 +268,9 @@ news6:[{
   },
   switchRightTab:function(e){
     let id = e.target.dataset.id;
-    console.log(id);
+   // console.log('11',coid);
     this.setData({
-      ids: id
+      ids: id,
     })
     wx.pageScrollTo({
       scrollTop: 0
@@ -267,6 +285,7 @@ news6:[{
       navH: App.globalData.navHeight
      });
 
+     
      
   },
 

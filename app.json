@@ -3,6 +3,7 @@
     "pages/active/active",
     "pages/index/index",
     "pages/view/view",
+    "pages/text/text",
     "pages/logs/logs"
   ],
   "window":{

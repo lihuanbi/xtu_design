@@ -3,7 +3,29 @@ view{
   /* display: flex; */
   flex-wrap: wrap;
 }
+.co{
+  height: 60rpx;
+  width: 60rpx;
+  border:1px solid #000;
+  position: relative;
+  bottom: 70rpx;
+  border-radius: 50%;
+  z-index: 9;
+}
+.co.active{
+  border:1px solid red;
+}
 
+.collect{
+  height: 40rpx;
+  width:40rpx;
+  align-content: center;
+  border-radius: 50%;
+  position: relative;
+  left: 10rpx;
+  top: 10rpx;
+
+}
 .goTop{
   height: 80rpx;
   width: 80rpx;

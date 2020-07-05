@@ -49,6 +49,8 @@
   background: #fff;        /* 右侧主盒子背景颜色 */
 }
 
+
+
 .title{
   width: 90%;
   display: flex;  

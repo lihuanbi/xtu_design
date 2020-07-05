@@ -5,7 +5,7 @@
 <view class="nav nav-bg" style="height:{{navH}}px">
   <view class="nav-title">
     <view class="ini" style="margin-top:calc({{navH}}*0.37px)"> 
-      <icon class="inisearch" type="search" size="12"/>
+      <icon class="inisearch" type="search" size="12" bindtap="suo"/>
       <input class="w-input" placeholder="搜索活动"/>
      </view>
     </view>
@@ -67,18 +67,21 @@
      </view>
   
      </view>
+      <view class="co" bindtap="collect" data-newsId="{{item.idm}}">
+     <image src='img/co.jpg' class='collect' ></image>
+     </view>
 </view>
  </view>
 </block>
 
 <block wx:for='{{news2}}' wx:key='id' wx:if="{{ids==2}}">
-<view class="newsitem"  style="top:calc({{navH}}*0.8px)" catchtap="getnews" data-newsId="{{item.idm}}">
-<view class="imag">
-     <image src='{{item.imgurl}}' class="img"></image>
+<view class="newsitem"  style="top:calc({{navH}}*0.8px)">
+<view class="imag" catchtap="getnews" data-newsId="{{item.idm}}">
+     <image src='{{item.imgurl}}'  class="img"></image>
 </view>
 
 <view class="news-text">
-     <text class='title'>{{item.title}}</text>
+     <text class='title' catchtap="getnews" data-newsId="{{item.idm}}">{{item.title}}</text>
 
      <view class= 'bottext'>  
      <view class="authup">
@@ -88,7 +91,10 @@
      <view class="auth">
      <text class='date'> {{item.date}}</text>    
      </view>
-  
+     </view>
+
+     <view class="co" bindtap="collect" data-newsId="{{item.idm}}">
+     <image src='img/co.jpg' class='collect' ></image>
      </view>
 </view>
  </view>
@@ -112,6 +118,9 @@
      <text class='date'> {{item.date}}</text>    
      </view>
   
+     </view>
+      <view class="co" bindtap="collect" data-newsId="{{item.idm}}">
+     <image src='img/co.jpg' class='collect' ></image>
      </view>
 </view>
  </view>
@@ -137,6 +146,9 @@
      </view>
   
      </view>
+      <view class="co" bindtap="collect" data-newsId="{{item.idm}}">
+     <image src='img/co.jpg' class='collect' ></image>
+     </view>
 </view>
  </view>
 </block>
@@ -159,6 +171,9 @@
      <text class='date'> {{item.date}}</text>    
      </view>
   
+     </view>
+      <view class="co" bindtap="collect" data-newsId="{{item.idm}}">
+     <image src='img/co.jpg' class='collect' ></image>
      </view>
 </view>
  </view>

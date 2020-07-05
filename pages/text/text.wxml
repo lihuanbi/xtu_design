@@ -1,0 +1,2 @@
+<!--pages/text/text.wxml-->
+<text>{{postsData.idm}}</text>
