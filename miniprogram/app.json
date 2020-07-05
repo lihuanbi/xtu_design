@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/add_activity/add_activity",
     "pages/month_calendar/month_calendar",
     "pages/login/login",
     "pages/sign/sign",

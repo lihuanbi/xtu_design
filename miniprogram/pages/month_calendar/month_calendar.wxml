@@ -27,8 +27,22 @@
 <scroll-view class="dateText" scroll-y>
     <view wx:for="{{ dateTextArr }}">
         <view wx:if="{{ item.id==date_index }}">
-            <view>{{ item.id }}</view>
-            <view>{{ item.content }}</view>
+            <!-- <view>{{ item.id }}</view> -->
+            <view class="output_today_num">
+                事项序号：{{ item.today_num }}
+            </view>
+            <view class="output_name">
+                活动：{{ item.content.active_name }}
+            </view>
+            <view class="output_time">
+                时间：{{ item.content.time }}
+            </view>
+            <view class="output_plase">
+                地点：{{ item.content.plase }}
+            </view>
+            <view class="output_detail">
+                活动介绍：{{ item.content.active_detail }}
+            </view>
         </view>
         
     </view>

@@ -116,5 +116,36 @@ padding-right: 0.6rem;
 .dateText{
   width: 100%;
   height: 378rpx;
-  background-color: rgb(92, 157, 243);
+  background-color: rgb(172, 228, 245);
+}
+
+
+.output_today_num{
+  margin:20rpx ;
+  margin-top: 50rpx;
+  margin-left: 50rpx;
+  margin-right: 50rpx;
+}
+.output_name{
+  margin:20rpx ;
+  margin-left: 50rpx;
+  margin-right: 50rpx;
+}
+.output_time{
+  margin:20rpx ;
+  margin-left: 50rpx;
+  margin-right: 50rpx;
+}
+.output_plase{
+  margin:20rpx ;
+  margin-left: 50rpx;
+  margin-right: 50rpx;
+}
+.output_detail{
+  margin:20rpx ;
+  margin-bottom: 70rpx;
+  margin-left: 50rpx;
+  margin-right: 50rpx;
+  padding-bottom: 50rpx;
+  border-bottom: whitesmoke solid 2rpx;
 }
