@@ -2,6 +2,7 @@
 
 <view class="container">
 <view class="search">
+
   <input type="text"
     placeholder="请输入关键字"
   />
@@ -9,7 +10,7 @@
   <view  class="header">    
     <view class="txt">
       <image src="/pages/index/image/上一页.png" /> 
-      2,JUN,2020
+      {{time}}
       <image src="/pages/index/image/下一页.png" /> 
     </view>
   </view>

@@ -24,7 +24,9 @@ Page({
     curRange:[],
     curBegin:0,
     curFinish:1,
-    remind:[]
+    remind:[],
+    time:'',
+    date:''
   },
   fetchData:function(t){
     const newquestions =[];
@@ -59,6 +61,12 @@ Page({
         userInfo:userInfo
       })
     })
+    var TIME=util.formatTime(new Date());
+    this.setData(
+      {
+        time:TIME,
+      }
+    )
   },
   iptChange(e){ 
     let timeArr = util.setTimeHalf();   

@@ -7,7 +7,7 @@ function formatTime(date) {
   var minute = date.getMinutes()
   var second = date.getSeconds()
 
-  return [hour,minute];
+  return [ year,month, day];
 
  // return [ month, day].map(formatNumber).join('/') + ' ' + [hour, minute, second].map(formatNumber).join(':')
 }
