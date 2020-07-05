@@ -48,14 +48,14 @@
 <!-- 下边的列表 -->
 <view class="nav_buttom">
 <block wx:for='{{news1}}' wx:key='id' wx:if="{{ids==1}}">
-<view class="newsitem"  style="top:calc({{navH}}*0.8px)" catchtap="getnews" data-newsId='{{item.idm}}'>
+<view class="newsitem"  style="top:calc({{navH}}*0.8px)">
 
-<view class="imag">
+<view class="imag" catchtap="getnews" data-newsId='{{item.idm}}'>
      <image src='{{item.imgurl}}' class="img"></image>
 </view>
 
 <view class="news-text">
-     <text class='title'>{{item.title}}</text>
+     <text class='title' catchtap="getnews" data-newsId='{{item.idm}}'>{{item.title}}</text>
 
      <view class= 'bottext'>  
      <view class="authup">
@@ -101,13 +101,13 @@
 </block>
 
 <block wx:for='{{news3}}' wx:key='id' wx:if="{{ids==3}}">
-<view class="newsitem"  style="top:calc({{navH}}*0.8px)" catchtap="getnews" data-newsId="{{item.idm}}">
-<view class="imag">
+<view class="newsitem"  style="top:calc({{navH}}*0.8px)" >
+<view class="imag" catchtap="getnews" data-newsId='{{item.idm}}'>
      <image src='{{item.imgurl}}' class="img"></image>
 </view>
 
 <view class="news-text">
-     <text class='title'>{{item.title}}</text>
+     <text class='title' catchtap="getnews" data-newsId='{{item.idm}}'>{{item.title}}</text>
 
      <view class= 'bottext'>  
      <view class="authup">
@@ -128,13 +128,13 @@
 
 
 <block wx:for='{{news4}}' wx:key='id' wx:if="{{ids==4}}">
-<view class="newsitem"  style="top:calc({{navH}}*0.8px)" catchtap="getnews" data-newsId="{{item.id}}">
-<view class="imag">
+<view class="newsitem"  style="top:calc({{navH}}*0.8px)" >
+<view class="imag" catchtap="getnews" data-newsId='{{item.idm}}'>
      <image src='{{item.imgurl}}' class="img"></image>
 </view>
 
 <view class="news-text">
-     <text class='title'>{{item.title}}</text>
+     <text class='title' catchtap="getnews" data-newsId="{{item.id}}">{{item.title}}</text>
 
      <view class= 'bottext'>  
      <view class="authup">
@@ -154,13 +154,13 @@
 </block>
 
 <block wx:for='{{news5}}' wx:key='id' wx:if="{{ids==5}}">
-<view class="newsitem"  style="top:calc({{navH}}*0.8px)" catchtap="getnews" data-newsId="{{item.idm}}">
-<view class="imag">
+<view class="newsitem"  style="top:calc({{navH}}*0.8px)" >
+<view class="imag" catchtap="getnews" data-newsId="{{item.idm}}">
      <image src='{{item.imgurl}}' class="img"></image>
 </view>
 
 <view class="news-text">
-     <text class='title'>{{item.title}}</text>
+     <text class='title' catchtap="getnews" data-newsId="{{item.idm}}">{{item.title}}</text>
 
      <view class= 'bottext'>  
      <view class="authup">
@@ -180,13 +180,13 @@
 </block>
 
 <block wx:for='{{news6}}' wx:key='id' wx:if="{{ids==6}}">
-<view class="newsitem"  style="top:calc({{navH}}*0.8px)" catchtap="getnews" data-newsId="{{item.idm}}">
-<view class="imag">
+<view class="newsitem"  style="top:calc({{navH}}*0.8px)" >
+<view class="imag" catchtap="getnews" data-newsId="{{item.idm}}">
      <image src='{{item.imgurl}}' class="img"></image>
 </view>
 
 <view class="news-text">
-     <text class='title'>{{item.title}}</text>
+     <text class='title' catchtap="getnews" data-newsId="{{item.idm}}">{{item.title}}</text>
 
      <view class= 'bottext'>  
      <view class="authup">
@@ -197,6 +197,9 @@
      <text class='date'> {{item.date}}</text>    
      </view>
   
+     </view>
+      <view class="co" bindtap="collect" data-newsId="{{item.idm}}">
+     <image src='img/co.jpg' class='collect' ></image>
      </view>
 </view>
  </view>
