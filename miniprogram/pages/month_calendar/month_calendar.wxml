@@ -11,15 +11,25 @@
         </view>
     </view>
     <view class='header'>
-        <view wx:for='{{date}}' class='{{(index == todayIndex) && isTodayWeek ? "weekMark" : ""}}'>{{item}}
+        <view wx:for='{{date}}' class='{{(index == todayIndex) && isTodayWeek ? "weekMark" : ""}}'>
+            {{item}}
         </view>
     </view>
     <view class='date-box'>
-        <view wx:for='{{dateArr}}' class='{{isToday == item.isToday ? "nowDay" : ""}}' data-date='{{item.isToday}}'>
-            <view class='date-head'>
+        <view wx:for='{{dateArr}}' class='{{isToday == item.isToday ? "nowDay" : ""}}' data-date='{{item.isToday}}' bindtap="changeDate" id="{{ item.dateNum }}">
+            <view class="{{dateArr_change[item.dateNum]}}">
                 <view>{{item.dateNum}}</view>
             </view>
             <!-- <view class='date-weight'>{{item.weight}}</view> -->
         </view>
     </view>
 </view>
+<scroll-view class="dateText" scroll-y>
+    <view wx:for="{{ dateTextArr }}">
+        <view wx:if="{{ item.id==date_index }}">
+            <view>{{ item.id }}</view>
+            <view>{{ item.content }}</view>
+        </view>
+        
+    </view>
+</scroll-view>

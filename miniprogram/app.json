@@ -1,7 +1,8 @@
 {
   "pages": [
-    "pages/sign/sign",
     "pages/month_calendar/month_calendar",
+    "pages/login/login",
+    "pages/sign/sign",
     "pages/date_html/date_html",
     "pages/tar_other/tar_other",
     "pages/index/index",

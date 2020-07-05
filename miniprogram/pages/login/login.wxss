@@ -1,0 +1,15 @@
+/* pages/login/login.wxss */
+.input{
+  margin: 20rpx;
+  border: gainsboro solid 1rpx;
+  border-radius: 7%;
+}
+
+.sign_html{
+  margin: 150rpx;
+}
+
+.login_button{
+  margin:100rpx ;
+  background-color: rgb(83, 119, 236);
+}
