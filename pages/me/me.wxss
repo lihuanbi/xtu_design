@@ -1,6 +1,5 @@
 /* pages/me/me.wxss */
 .avatar-wrapper {
-  background: #1296db;
   padding: 25px 0;
 }
 
@@ -10,13 +9,21 @@
 }
 
 .avatar-wrapper .avatar image {
+  position: relative;
+  top: 30rpx;
   width: 100px;
   height: 100px;
 }
 
 .avatar-wrapper .text {
+  position: relative;
+  top: 20rpx;
   text-align: center;
-  color: #fff;
+  color:black;
+}
+.little image{
+  height: 80rpx;
+  width: 80rpx;
 }
 
 .weui-cell__hd image {
@@ -33,4 +40,34 @@
 
 .weui-cells::before{
   border-top: none;
+}
+
+.caidan{
+  height: 120rpx;
+  border: 1rpx;
+  border-bottom: solid;
+  border-color: #cdcdcd;
+}
+.cdtext{
+  height: 70rpx;
+  width: 70rpx;
+ position: relative;
+ left: 30rpx;
+ top: -10rpx;
+}
+.cdimage{
+  height: 70rpx;
+  width: 70rpx;
+  padding-right: 20rpx;
+  padding-top: 20rpx;
+  position: relative;
+  left: 35rpx;
+  top: 15rpx;
+}
+.background {
+  width: 100%;
+  height: 100%;
+  position:fixed; 
+  background-size:100% 100%;
+  z-index: -1;
 }
