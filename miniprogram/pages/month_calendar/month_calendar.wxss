@@ -115,7 +115,7 @@ padding-right: 0.6rem;
 
 .dateText{
   width: 100%;
-  height: 378rpx;
+  height: 300px;
   background-color: rgb(172, 228, 245);
 }
 

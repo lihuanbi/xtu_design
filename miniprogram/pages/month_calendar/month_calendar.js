@@ -11,40 +11,6 @@ Page({
     dateArr_change:[
       "date-head","date-head","date-head","date-head","date-head","date-head","date-head","date-head","date-head","date-head","date-head","date-head","date-head","date-head","date-head","date-head","date-head","date-head","date-head","date-head","date-head","date-head","date-head","date-head","date-head","date-head","date-head","date-head","date-head","date-head","date-head","date-head"
     ],
-   /*  dateTextArr:[
-      {id:1,content:"今天是1号"},
-      {id:2,content:"今天是2号"},
-      {id:3,content:"今天是3号"},
-      {id:4,content:"今天是4号"},
-      {id:5,content:"今天是5号"},
-      {id:6,content:"今天是6号"},
-      {id:7,content:"今天是7号"},
-      {id:8,content:"今天是8号"},
-      {id:9,content:"今天是9号"},
-      {id:10,content:"今天是10号"},
-      {id:11,content:"今天是11号"},
-      {id:12,content:"今天是12号"},
-      {id:13,content:"今天是13号"},
-      {id:14,content:"今天是14号"},
-      {id:15,content:"今天是15号"},
-      {id:16,content:"今天是16号"},
-      {id:17,content:"今天是17号"},
-      {id:18,content:"今天是18号"},
-      {id:19,content:"今天是19号"},
-      {id:20,content:"今天是20号"},
-      {id:21,content:"今天是21号"},
-      {id:22,content:"今天是22号"},
-      {id:23,content:"今天是23号"},
-      {id:24,content:"今天是24号"},
-      {id:25,content:"今天是25号"},
-      {id:26,content:"今天是26号"},
-      {id:27,content:"今天27号"},
-      {id:28,content:"今天是28号"},
-      {id:29,content:"今天是29号"},
-      {id:30,content:"今天是30号"},
-      {id:31,content:"今天是31号"},
-    ], */
-    //dateTextArr:[],
     dateTextContent:"aaaa",
     date_index:0,
   },
@@ -62,11 +28,14 @@ Page({
     //var dateTextContent=this.data.dateTextContent
     wx.cloud.database().collection('dateTextArr').get({
       success(res){
-        console.log("取数据成功",res.data[1].content)
+        console.log("取数据成功",res.data)
         that.setData({
           dateTextArr:res.data,
           //dateTextContent:res.data[1].content
         })
+      },
+      fail(res){
+        console.log("取数据失败")
       }
     })
 

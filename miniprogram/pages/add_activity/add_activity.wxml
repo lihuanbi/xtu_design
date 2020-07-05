@@ -1,0 +1,19 @@
+<!--pages/add_activity/add_activity.wxml-->
+<view class="addActivity_head">
+  <view class="headText">增加活动页面</view>
+</view>
+<view class="addActivity_html">
+  <view>新增活动日期：</view>
+  <input class="input" type="number" bindinput="getId"></input>
+  <view>新增当天事项序号：</view>
+  <input class="input" type="number" bindinput="getToday_num"></input>
+  <view>活动名：</view>
+  <input class="input" bindinput="getActive_name"></input>
+  <view>时间：</view>
+  <input class="input" bindinput="getTime"></input>
+  <view>地点：</view>
+  <input class="input" bindinput="getPlase"></input>
+  <view>活动介绍：</view>
+  <textarea class="detail_input" auto-focus="ture" bindinput="getActive_detail"></textarea>
+  <button type="primary" bindtap="addActivity">确定新增</button>
+</view>

@@ -1,0 +1,33 @@
+/* pages/add_activity/add_activity.wxss */
+.input{
+  margin: 20rpx;
+  border: gainsboro solid 1rpx;
+  border-radius: 7%;
+}
+
+.addActivity_html{
+  margin-top: 50rpx;
+  margin-left:150rpx;
+  margin-right:150rpx;
+  margin-bottom: 50rpx;
+}
+
+.detail_input{
+  border: gainsboro solid 1rpx;
+  height: 300rpx;
+  width: 500rpx;
+  margin-bottom: 80rpx;
+}
+
+.addActivity_head{
+  margin-bottom: 0rpx;
+  margin-top: 50rpx;
+  margin-left:170rpx;
+  margin-right:170rpx;
+}
+
+.headText{
+  color:green;
+  font-size:150%;
+}
+

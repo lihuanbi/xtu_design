@@ -1,7 +1,7 @@
 {
-  "pages": [
-    "pages/add_activity/add_activity",
+  "pages": [ 
     "pages/month_calendar/month_calendar",
+    "pages/add_activity/add_activity",
     "pages/login/login",
     "pages/sign/sign",
     "pages/date_html/date_html",
@@ -41,8 +41,8 @@
       "iconPath":"images/tar_other_01.png",
       "selectedIconPath":"images/tar_other_02.png"
     },{
-      "pagePath": "pages/date_html/date_html",
-      "text": "日期活动",
+      "pagePath": "pages/add_activity/add_activity",
+      "text": "新增",
       "iconPath":"images/tar_other_01.png",
       "selectedIconPath":"images/tar_other_02.png"
     },{
