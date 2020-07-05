@@ -7,6 +7,21 @@
     "pages/login/login",
     "pages/logs/logs"
   ],
+  "tabBar": {
+    "list": [{
+      "pagePath": "pages/home/home",
+      "text": "首页",
+      "iconPath": "/images/home.png",
+      "selectedIconPath": "/images/_home.png"
+    },
+    {
+      "pagePath": "pages/me/me",
+      "text": "个人中心",
+      "iconPath": "/images/mine.png",
+      "selectedIconPath": "/images/_mine.png"
+    }
+  ]
+  },
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",

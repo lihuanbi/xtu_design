@@ -41,7 +41,7 @@ Page({
             title: '登录成功',
           })
           //console.log('登录成功')
-          wx.navigateTo({     //登录成功后跳转到首页
+          wx.switchTab({     //登录成功后跳转到首页
             url:'/pages/home/home'
           })
         }else{

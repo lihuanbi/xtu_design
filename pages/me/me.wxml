@@ -1,4 +1,20 @@
 <!--pages/me/me.wxml-->
-<view>
+<view class="mine-wrapper">
+<!-- 头像信息栏 -->
+  <view class="avatar-wrapper">
+    <view>
+      <view class="avatar">  
+        <image style="border-radius:50%;" src="../../images/mine.png"></image>
+      </view>
+      <view class="text">
+        <text bindtap="toLogin">注册 / 登录</text>
+      </view>
+      <view class="text">
+        <text wx:if="{{userSign==2}}">{{"您还没有填写真实信息，暂不能借书"}}</text>
+        <text wx:elif="{{userSign==1}}">{{"会员用户"}}</text>
+      </view>
+    </view>
+  </view>
+
 
 </view>

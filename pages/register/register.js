@@ -40,6 +40,7 @@ Page({
       })
       return
     }
+  
     //校验密码长度最少为6位
     if(password.length<6){
       wx.showToast({
@@ -48,6 +49,19 @@ Page({
       })
       return
     }
+    //判断是否存在已有用户
+    wx.cloud.database().collection('users').where({
+      number:this.data.number
+    }).get().then(res=>{
+      console.log(res.data)//打印返回结果
+      if(res.data.length!=0){
+        wx.showToast({
+          title: '该用户已存在',
+        })
+      }
+      return
+  })
+
     //注册功能的实现
     wx.cloud.database().collection('users').add({
       data:{
@@ -56,7 +70,7 @@ Page({
         password:password
       },
       success(res){
-       console.log('注册成功',res)
+       //console.log('注册成功',res)
        wx.showToast({
          title:'注册成功',
        })
