@@ -45,7 +45,7 @@
 .caidan{
   height: 120rpx;
   border: 1rpx;
-  border-bottom: solid;
+  border-top: solid;
   border-color: #cdcdcd;
 }
 .cdtext{

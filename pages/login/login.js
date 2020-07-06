@@ -44,6 +44,8 @@ Page({
           wx.switchTab({     //登录成功后跳转到首页
             url:'/pages/home/home'
           })
+          //保存用户登录状态
+          wx.setStorageSync('users', users)
         }else{
           wx.showToast({
             icon:'none',

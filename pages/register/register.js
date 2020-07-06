@@ -58,29 +58,30 @@ Page({
         wx.showToast({
           title: '该用户已存在',
         })
+        return 
+      }else{
+//注册功能的实现
+wx.cloud.database().collection('users').add({
+  data:{
+    nickname:nickname,
+    number:number,
+    password:password
+  },
+  success(res){
+   //console.log('注册成功',res)
+   wx.showToast({
+     title:'注册成功',
+   })
+   wx.navigateTo({
+     url: '/pages/login/login',  //注册成功后跳转到登录页
+   })
+  },
+  fail(res){
+    console.log('注册失败',res)
+  }
+})
       }
-      return
-  })
-
-    //注册功能的实现
-    wx.cloud.database().collection('users').add({
-      data:{
-        nickname:nickname,
-        number:number,
-        password:password
-      },
-      success(res){
-       //console.log('注册成功',res)
-       wx.showToast({
-         title:'注册成功',
-       })
-       wx.navigateTo({
-         url: '/pages/login/login',  //注册成功后跳转到登录页
-       })
-      },
-      fail(res){
-        console.log('注册失败',res)
-      }
-    })
+     
+  }) 
   }
 })
