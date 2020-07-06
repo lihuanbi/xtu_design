@@ -53,11 +53,11 @@
 </view>
 <view class="caidan">
 <image class="cdimage" src="../../images/myactivity.png" ></image>
-   <text class="cdtext">我的活动</text>
+   <text class="cdtext" bindtap="toAdd">新增活动</text>
 </view>
 <view class="caidan">
 <image class="cdimage" src="../../images/edition.png" ></image>
-   <text class="cdtext">版本信息</text>
+   <text class="cdtext" bindtap="toRemember">我的备忘录</text>
 </view>
 <view class="caidan">
 <image class="cdimage" src="../../images/exit.png" ></image>

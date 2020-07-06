@@ -116,7 +116,7 @@ padding-right: 0.6rem;
 .dateText{
   width: 100%;
   height: 300px;
-  background-color: rgb(172, 228, 245);
+  background-color: #22A7F6;
 }
 
 
@@ -125,21 +125,36 @@ padding-right: 0.6rem;
   margin-top: 50rpx;
   margin-left: 50rpx;
   margin-right: 50rpx;
+  color: whitesmoke;
+  font-size:30rpx;
 }
 .output_name{
   margin:20rpx ;
   margin-left: 50rpx;
   margin-right: 50rpx;
+  padding-left: 15rpx;
+  border-left: red solid 10rpx;
+  color: white;
+  font-weight:bold;
+  font-size:40rpx;
 }
 .output_time{
   margin:20rpx ;
   margin-left: 50rpx;
   margin-right: 50rpx;
+  padding-left: 15rpx;
+  border-left: blue solid 10rpx;
+  color: gainsboro;
+  font-size:25rpx;
 }
 .output_plase{
   margin:20rpx ;
   margin-left: 50rpx;
   margin-right: 50rpx;
+  padding-left: 15rpx;
+  border-left: blue solid 10rpx;
+  color: gainsboro;
+  font-size:25rpx;
 }
 .output_detail{
   margin:20rpx ;
@@ -148,4 +163,20 @@ padding-right: 0.6rem;
   margin-right: 50rpx;
   padding-bottom: 50rpx;
   border-bottom: whitesmoke solid 2rpx;
+  color: whitesmoke;
+  font-size:35rpx ;
+}
+.output_detail2{
+  margin:20rpx ;
+  margin-bottom: 70rpx;
+  margin-left: 50rpx;
+  margin-right: 50rpx;
+  color: white;
+  font-size: 30rpx;
+}
+
+.bcimage{
+  z-index:-1;
+  position: fixed;
+  
 }

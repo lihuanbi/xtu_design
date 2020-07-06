@@ -1,11 +1,14 @@
 /* pages/week_calendar/week_calendar.wxss */
 .box1 .dateBox{
   width: 100%;
-  height: 50px;
-  line-height: 50px;
+  height: 35px;
+  line-height: 35px;
   text-align: center;
   margin-top: 20px;
+  margin-left: 150rpx;
+  margin-right: 150rpx;
   font-size: 40rpx;
+  background-color: whitesmoke;
 }
 
 .box1{
@@ -23,8 +26,8 @@
 
 .dateOn{
   border-radius: 50%;
-  background-color: hotpink;
-  color: #fff;
+  background-color:rgb(0, 153, 255);
+  color:rgb(14, 66, 18);
 }
 .ball {
   box-shadow:2px 2px 10px #AAA;
@@ -33,4 +36,22 @@
 }
 .font-color{
   color:#a9a9a9;
+}
+
+.week_date{
+  /* background-color: rgb(73, 202, 241); */
+  padding-bottom: 30rpx;
+}
+.control_week{
+  margin-left:100rpx ;
+  margin-right:100rpx ;
+}
+
+.bcimage{
+  z-index:-1;
+  position: fixed;
+  height: 165px;
+}
+.bcpng{
+  width: 100%;
 }

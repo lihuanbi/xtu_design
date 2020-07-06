@@ -1,4 +1,5 @@
 <view class='wrap'>
+    
     <view>
         <view class='date-show'>
             <view class='lt-arrow' bindtap='lastMonth'>
@@ -28,20 +29,23 @@
     <view wx:for="{{ dateTextArr }}">
         <view wx:if="{{ item.id==date_index }}">
             <!-- <view>{{ item.id }}</view> -->
-            <view class="output_today_num">
-                事项序号：{{ item.today_num }}
-            </view>
-            <view class="output_name">
-                活动：{{ item.content[0] }}
-            </view>
-            <view class="output_time">
-                时间：{{ item.content[1] }}
-            </view>
-            <view class="output_plase">
-                地点：{{ item.content[2] }}
-            </view>
-            <view class="output_detail">
-                活动介绍：{{ item.content[3] }}
+            <view >
+                <view class="output_today_num">
+                    事项序号：{{ item.today_num }}
+                </view>
+                <view class="output_name">
+                    活动：{{ item.content[0] }}
+                </view>
+                <view class="output_time">
+                    时间：{{ item.content[1] }}
+                </view>
+                <view class="output_plase">
+                    地点：{{ item.content[2] }}
+                </view>
+                <text class="output_detail2">活动介绍：</text>
+                <view class="output_detail">
+                    {{ item.content[3] }}
+                </view>
             </view>
         </view>
         

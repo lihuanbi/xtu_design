@@ -1,11 +1,11 @@
 {
   "pages": [ 
-    "pages/week_calendar/week_calendar",
     "pages/month_calendar/month_calendar",
+    "pages/week_calendar/week_calendar",
     "pages/add_activity/add_activity",
+    "pages/register/register",
     "pages/login/login",
     "pages/me/me",
-    "pages/register/register",
     "pages/active/active",
     "pages/view/view",
     "pages/text/text",
@@ -16,7 +16,7 @@
   "window": {
     "backgroundColor": "#FFFFFF",
     "navigationBarBackgroundColor": "#00BBFF",
-    "navigationBarTitleText": "林瑞全的小程序",
+    "navigationBarTitleText": "软件设计作业",
     "navigationBarTextStyle": "black",
     "enablePullDownRefresh":true,
     "backgroundTextStyle": "dark"
@@ -25,16 +25,16 @@
     "list": [{
       "pagePath": "pages/week_calendar/week_calendar",
       "text": "周活动-日历",
-      "iconPath":"images/tar_other_01.png",
-      "selectedIconPath":"images/tar_other_02.png"
+      "iconPath":"images/week_calendar1.png",
+      "selectedIconPath":"images/week_calendar2.png"
     },{
       "pagePath": "pages/month_calendar/month_calendar",
-      "text": "月活动日历",
-      "iconPath":"images/tar_other_01.png",
-      "selectedIconPath":"images/tar_other_02.png"
+      "text": "月活动-日历",
+      "iconPath":"images/month_calendar1.png",
+      "selectedIconPath":"images/month_calendar2.png"
     },{
       "pagePath":"pages/active/active",
-      "text": "活动",
+      "text": "活动精选",
       "iconPath": "/images/ellipse1.png",
       "selectedIconPath": "/images/ellipse2.png"
     },{

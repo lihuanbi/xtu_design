@@ -1,6 +1,6 @@
 <!--pages/register/register.wxml-->
 <form>
-<view class="item">
+<view class="item_top">
   <input type="text" name="nickname"  placeholder="请设置昵称" placeholder-class="center" bindinput="getNickname"></input>
   </view>
   <view class="item">
