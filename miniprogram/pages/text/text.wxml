@@ -1,0 +1,2 @@
+<!--pages/text/text.wxml-->
+<text>将活动（{{postsData.idm}}）加入收藏</text>

@@ -1,120 +1,175 @@
 //index.js
-const app = getApp()
 
-Page({
-  data: {
-    avatarUrl: './user-unlogin.png',
-    userInfo: {},
-    logged: false,
-    takeSession: false,
-    requestResult: ''
-  },
+var util = require("../../utils/util.js");
 
-  onLoad: function() {
-    if (!wx.cloud) {
-      wx.redirectTo({
-        url: '../chooseLib/chooseLib',
-      })
-      return
+//更改数组 第三个参数是对象
+function editArr(arr,i,editCnt){
+  let newArr = arr,editingObj = newArr[i];   
+    for (var x in editCnt){
+      editingObj[x]= editCnt[x];
     }
+  return newArr;
+}
 
-    // 获取用户信息
-    wx.getSetting({
-      success: res => {
-        if (res.authSetting['scope.userInfo']) {
-          // 已经授权，可以直接调用 getUserInfo 获取头像昵称，不会弹框
-          wx.getUserInfo({
-            success: res => {
-              this.setData({
-                avatarUrl: res.userInfo.avatarUrl,
-                userInfo: res.userInfo
-              })
-            }
+//获取应用实例
+var app = getApp()
+Page({
+  data: {  
+    tabnav:{},
+    
+    userInfo: {},
+    curIpt:'',
+    showAll:true,
+    lists:[],
+    curRange:[],
+    curBegin:0,
+    curFinish:1,
+    remind:[],
+    time:'',
+    date:''
+  },
+  fetchData:function(t){
+    const newquestions =[];
+    for(let i=1;i<30;i++){
+      newquestions.push({
+        "id":i
+      })
+    }
+  },
+  //事件处理函数
+  bindViewTap: function() {
+    wx.navigateTo({
+      url: '../logs/logs'
+    })
+  },
+  onLoad: function () {
+    var that = this;
+    //获取之前保留在缓存里的数据
+    wx.getStorage({
+      key: 'todolist',
+      success: function(res) {
+        if(res.data){
+           that.setData({
+            lists:res.data
           })
         }
+      } 
+    })
+    //获取用户信息
+    /* app.getUserInfo(function(userInfo){
+      that.setData({
+        userInfo:userInfo
+      })
+    }) */
+    var TIME=util.formatTime(new Date());
+    this.setData(
+      {
+        time:TIME,
       }
+    )
+  },
+  iptChange(e){ 
+    let timeArr = util.setTimeHalf();   
+    this.setData({
+      curIpt:e.detail.value,
+      curRange:timeArr
     })
   },
-
-  onGetUserInfo: function(e) {
-    if (!this.data.logged && e.detail.userInfo) {
-      this.setData({
-        logged: true,
-        avatarUrl: e.detail.userInfo.avatarUrl,
-        userInfo: e.detail.userInfo
-      })
+  formReset(){
+    this.setData({
+      curIpt:'',
+      curRange:[]
+    })
+  },
+  formSubmit(){
+    let cnt = this.data.curIpt,newLists = this.data.lists,i = newLists.length,begin=this.data.curRange[this.data.curBegin],finish = this.data.curRange[this.data.curFinish];
+    if (cnt){
+       newLists.push({id:i,content:cnt,done:false,beginTime:begin,finishTime:finish,editing:false});
+       this.setData({
+        lists:newLists,
+        curIpt:''
+      }) 
     }
   },
-
-  onGetOpenid: function() {
-    // 调用云函数
-    wx.cloud.callFunction({
-      name: 'login',
-      data: {},
-      success: res => {
-        console.log('[云函数] [login] user openid: ', res.result.openid)
-        app.globalData.openid = res.result.openid
-        wx.navigateTo({
-          url: '../userConsole/userConsole',
-        })
-      },
-      fail: err => {
-        console.error('[云函数] [login] 调用失败', err)
-        wx.navigateTo({
-          url: '../deployFunctions/deployFunctions',
-        })
-      }
+  beginChange(e){
+     this.setData({
+      curBegin: e.detail.value,
+      curFinish: Number(e.detail.value)+1
     })
   },
-
-  // 上传图片
-  doUpload: function () {
-    // 选择图片
-    wx.chooseImage({
-      count: 1,
-      sizeType: ['compressed'],
-      sourceType: ['album', 'camera'],
-      success: function (res) {
-
-        wx.showLoading({
-          title: '上传中',
-        })
-
-        const filePath = res.tempFilePaths[0]
-        
-        // 上传图片
-        const cloudPath = 'my-image' + filePath.match(/\.[^.]+?$/)[0]
-        wx.cloud.uploadFile({
-          cloudPath,
-          filePath,
-          success: res => {
-            console.log('[上传文件] 成功：', res)
-
-            app.globalData.fileID = res.fileID
-            app.globalData.cloudPath = cloudPath
-            app.globalData.imagePath = filePath
-            
-            wx.navigateTo({
-              url: '../storageConsole/storageConsole'
-            })
-          },
-          fail: e => {
-            console.error('[上传文件] 失败：', e)
-            wx.showToast({
-              icon: 'none',
-              title: '上传失败',
-            })
-          },
-          complete: () => {
-            wx.hideLoading()
-          }
-        })
-
-      },
-      fail: e => {
-        console.error(e)
-      }
+  finishChange(e){
+    this.setData({
+      curFinish: e.detail.value
     })
   },
-
+  //修改备忘录
+  toChange(e){
+    let i = e.target.dataset.id;
+      this.setData({
+        lists:editArr(this.data.lists,i,{editing:true})
+      })
+  },
+  iptEdit(e){
+    let i = e.target.dataset.id;
+    this.setData({
+      lists:editArr(this.data.lists,i,{curVal:e.detail.value})
+    })
+  },
+  saveEdit(e){   
+    let i = e.target.dataset.id;
+    this.setData({
+      lists:editArr(this.data.lists,i,{content:this.data.lists[i].curVal,editing:false})
+    })
+  },
+  setDone(e){
+    let i = e.target.dataset.id,originalDone = this.data.lists[i].done;
+      this.setData({
+        lists:editArr(this.data.lists,i,{done:!originalDone})
+      })
+  },
+  toDelete(e){
+    let i = e.target.dataset.id,newLists = this.data.lists;
+    newLists.map(function(l,index){
+      if (l.id == i){      
+        newLists.splice(index,1);
+      }
+    })   
+    this.setData({
+        lists:newLists
+      })
+  },
+  doneAll(){
+    let newLists = this.data.lists;
+    newLists.map(function(l){
+      l.done = true;
+    })   
+    this.setData({
+        lists:newLists
+      })
+  },
+  deleteAll(){
+    this.setData({
+        lists:[],
+        remind:[]
+      })
+  },
+  showUnfinished (){
+    this.setData({
+      showAll:false
+    })
+  },
+  showAll(){
+    //显示全部事项
+     this.setData({
+      showAll:true   
+    })
+  },
+  saveData(){
+    let listsArr = this.data.lists;
+    wx.setStorage({
+      key:'todolist',
+      data:listsArr
+    })
+  }
+  
 })

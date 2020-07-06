@@ -6,15 +6,6 @@ input{
   border-radius:15rpx;
   background-color: #dbdbdb;
 }
-.avatar{
-  display:flex;                   
-  justify-content: center;   
-  height: 400rpx;      
- }
- .avatar image { 
-   width:250rpx;
-   height:250rpx;
- }
 .item{
    height: 150rpx;
    display:flex;                   

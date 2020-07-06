@@ -1,2 +1,0 @@
-<!--pages/tar_other/tar_other.wxml-->
-<button type="primary" class="turnbutton" bindtap="toDate">跳转</button>

@@ -1,7 +1,0 @@
-<view class="sign_html">
-  <view>用户名：</view>
-  <input class="input" bindinput="getUsername"></input>
-  <view>密码：</view>
-  <input class="input" bindinput="getPassword"></input>
-  <button class="sign_button" type="primary" bindtap="toSign">注册</button>
-</view>

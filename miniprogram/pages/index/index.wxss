@@ -1,153 +1,203 @@
 /**index.wxss**/
-
-page {
-  background: #f6f6f6;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+.search{
+  text-align:center;
+  vertical-align:middel;
+  margin: 30rpx;
+  margin-left: 120rpx;
+  margin-right: 120rpx;
 }
-
-.userinfo, .uploader, .tunnel {
-  margin-top: 40rpx;
-  height: 140rpx;
-  width: 100%;
-  background: #fff;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-left: none;
-  border-right: none;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  transition: all 300ms ease;
+image{
+  box-sizing:border-box;
+  width: 50rpx;
+  height: 50rpx;
 }
-
-.userinfo {
-  padding-left: 120rpx;
+input{
+  color: #666;
+  font-size: 15px;
+  text-align: center;
+  width:500rpx;
+  height: 60rpx;
+  background-color: #ddd;
+  border-radius:15rpx;
 }
-
-.userinfo-avatar {
-  width: 100rpx;
-  height: 100rpx;
-  margin: 20rpx;
-  border-radius: 50%;
-  background-size: cover;
-  background-color: white;
-}
-
-.userinfo-avatar[size] {
-  width: 100rpx;
-}
-
-
-.userinfo-avatar:after {
-  border: none;
-}
-
-.userinfo-nickname {
-  font-size: 32rpx;
-  color: #007aff;
-  background-color: white;
-  background-size: cover;
-  text-align: left;
-  padding-left: 0;
-  margin-left: 10px;
-}
-
-.userinfo-nickname::after {
-  border: none;
-}
-
-.userinfo-nickname-wrapper {
-  flex: 1;
-}
-
-.uploader, .tunnel {
-  height: auto;
-  padding: 0 0 0 40rpx;
-  flex-direction: column;
-  align-items: flex-start;
-  box-sizing: border-box;
-}
-
-.uploader-text, .tunnel-text {
-  width: 100%;
-  line-height: 52px;
-  font-size: 34rpx;
-  color: #007aff;
-}
-
-.uploader-container {
-  width: 100%;
-  height: 400rpx;
-  padding: 20rpx 20rpx 20rpx 0;
-  display: flex;
-  align-content: center;
-  justify-content: center;
-  box-sizing: border-box;
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
-}
-
-.uploader-image {
-  width: 100%;
-  height: 360rpx;
-}
-
-.tunnel {
-  padding: 0 0 0 40rpx;
-}
-
-.tunnel-text {
+.header{
+  
+  margin-bottom: 40px;
+  background-color: #0080FF;
+  width:100%;
   position: relative;
-  color: #222;
+  height:100px;
+}
+.txt{
+  text-align: center;
+  font-size: 60rpx;
+  color: #ae9e84;
+  margin-top: 20px;
+}
+/*输入区域*/
+.input-wrap{  
+  margin: -10rpx 10rpx;
+}
+.flex-row{
   display: flex;
-  flex-direction: row;
-  align-content: center;
-  justify-content: space-between;
-  box-sizing: border-box;
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  margin: 10rpx 0;
+  width: 670rpx;
+  -webkit-box-pack: justify;
+}
+.pick-time{
+  line-height: 40rpx;
+  flex:1;
+  margin:-20rpx 0 20rpx;  
+}
+.time{
+  color: #777;
+  font-size:12px;
+}
+.switch{
+  transform: scale(0.5);
+  vertical-align: middle;
+}
+.btn{  
+  border-radius: 5px;
+  font-size: 40rpx;
+  line-height: 100rpx;
+  display: block;
+  background: #6fa6cf;
+}
+.btn-submit{
+  color: #fff;
+  flex: 1;
+  margin-right:10rpx;
+}
+.btn-hover{
+  background: #a2c7e2;
+}
+.btn-cancel{
+  background: #fff;
 }
 
-.tunnel-text:first-child {
-  border-top: none;
+.ipt-main{
+  border: 1rpx solid #eee;
+  border-radius: 5px;
+  height: 80rpx;
+  padding: 10rpx 15px;
+  font-size: 40rpx;
+  width: 610rpx;
+  display: block;
 }
 
-.tunnel-switch {
+/*展示列表区域*/
+.list-wrap{
+	text-align:left;
+	width:670rpx;
+  margin: 0 auto;	
+  background: #fff;
+  border:1px solid #e2e2e2;
+  position:relative;
+  border-radius:0 0 5rpx 5rpx;
+}
+.list-wrap::after{
+  content:'';
   position: absolute;
-  right: 20rpx;
-  top: -2rpx;
+  width: 98%;
+  height: 100%;
+  z-index: -1;
+  border: 1px solid #e6e6e6;
+  left: 1%;
+  bottom:-5px;
+  background: #fff;
+  border-radius:0 0 5rpx 5rpx;
 }
-
-.disable {
-  color: #888;
+.list-wrap::before{
+  content:'';
+  position: absolute;
+  width: 96%;
+  height: 100%;
+  z-index: -2;
+  border: 1px solid #e6e6e6;
+  left: 2%;
+  bottom:-9px;
+  background: #fff;
+  border-radius:0 0 5rpx 5rpx;
 }
-
-.service {
-  position: fixed;
-  right: 40rpx;
-  bottom: 40rpx;
-  width: 140rpx;
-  height: 140rpx;
-  border-radius: 50%;
-  background: linear-gradient(#007aff, #0063ce);
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+.list{
+  padding:10px;
+  position:relative;
+}
+.done{
+  background: #e6f1f8;
+  color:#ccc;
+}
+.ico-done{
+  position: absolute;
+  right: 80rpx;  
+}
+.done .ico-done{color: red}
+.ico-delete{
+	position:absolute;
+	right:10rpx;
+}	
+.red{
+  color: red;
+}
+.cnt{
+  width: 400rpx;
+}
+/*修改*/
+.edit-wrap{
+  position: absolute;
+  background: #fff;
+  left: 20px;
+  height: 100%;
+  width: 90%;
+  top: 0;
+  z-index: 2;
   display: flex;
-  align-content: center;
-  justify-content: center;
-  transition: all 300ms ease;
+  align-items: center;
+  padding: 6rpx;
+}
+.ipt-edit{
+  flex:1;
+  border: 1rpx solid #ddd;
+  border-radius: 3px;
+  padding: 5rpx;
+  margin-right: 10rpx;
+  font-size: 40rpx;
+}
+.btn-edit{
+  line-height: 60rpx;
+  font-size: 40rpx;
+  color: #fff;
+  height: 60rpx;
 }
 
-.service-button {
-  position: absolute;
-  top: 40rpx;
+/*列表地步操作区*/
+.footer{
+  display: flex;
+  justify-content:space-between;
+  font-size: 20rpx;
+  color: #a38e6d;
+  border-top: 1px solid #eee;
+}
+.ft-action{
+  color: #6fa6cf; 
+  margin: 0 10rpx;
+}
+.ft-area{  
+  padding: 20rpx;
+ text-align:center;
+}
+.ft-mid{
+  border-left: 1px solid #eee;
+  border-right: 1px solid #eee;
+  flex:1;
 }
 
-.service:active {
-  box-shadow: none;
-}
 
-.request-text {
-  padding: 20rpx 0;
-  font-size: 24rpx;
-  line-height: 36rpx;
-  word-break: break-all;
+.mt{
+  margin-top: 100rpx;
+}
+.btn-save{
+  width:300rpx;
+  color: #fff;
 }

@@ -1,0 +1,66 @@
+<!--pages/me/me.wxml-->
+<!-- 未登录 -->
+<view wx:if="{{!loginOK}}">
+<!-- 头像信息栏 -->
+  <view class="avatar-wrapper">
+ <image class='background' src="../../images/background7.jpg" mode="aspectFill"></image>
+    <view class="touxiang">
+      <view class="avatar">  
+        <image style="border-radius:50%;" src="../../images/people.jpg"></image>
+      </view>
+      <view class="text">
+        <text bindtap="toLogin">注册 / 登录</text>
+      </view>
+    </view>
+  </view>
+
+<view class="caidan">
+<image class="cdimage" src="../../images/setting.png" ></image>
+   <text class="cdtext">设置</text>
+</view>
+<view class="caidan">
+<image class="cdimage" src="../../images/myactivity.png" ></image>
+   <text class="cdtext" bindtap="toAdd">新增活动</text>
+</view>
+<view class="caidan">
+<image class="cdimage" src="../../images/edition.png" ></image>
+   <text class="cdtext" bindtap="toRemember">我的备忘录</text>
+</view>
+<view class="caidan">
+<image class="cdimage" src="../../images/exit.png" ></image>
+   <text class="cdtext">退出登录</text>
+</view>
+</view>
+
+<!-- 已登录 -->
+<view wx:else class="loginOK">
+ <view class="avatar-wrapper">
+ <image class='background' src="../../images/background7.jpg" mode="aspectFill"></image>
+    <view class="touxiang">
+      <view class="avatar">  
+        <image style="border-radius:50%;" src="../../images/people.jpg"></image>
+      </view>
+      <view class="text">
+        <text>{{nickname}}</text>
+        </view>
+      </view>
+    </view>
+
+
+<view class="caidan">
+<image class="cdimage" src="../../images/setting.png" ></image>
+   <text class="cdtext">设置</text>
+</view>
+<view class="caidan">
+<image class="cdimage" src="../../images/myactivity.png" ></image>
+   <text class="cdtext">我的活动</text>
+</view>
+<view class="caidan">
+<image class="cdimage" src="../../images/edition.png" ></image>
+   <text class="cdtext">版本信息</text>
+</view>
+<view class="caidan">
+<image class="cdimage" src="../../images/exit.png" ></image>
+   <text class="cdtext" bindtap="exit">退出登录</text>
+</view>
+</view>

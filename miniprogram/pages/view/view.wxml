@@ -1,0 +1,30 @@
+<!--pages/view/view.wxml-->
+<!-- <text>详情</text> -->
+
+
+<view class="thetext" scroll-y>
+{{thecontent.title}}
+</view>
+<view class="cont">
+<view class="union">
+<image src='{{thecontent.unionimg}}' class="unionimg"></image>
+<text class="uniontxt">{{thecontent.union}}</text>
+</view>
+<view class="imag">
+     <image src='{{thecontent.imgurl}}' class="img"></image>
+</view>
+<view class="action" scroll-y>
+活动地点：{{thecontent.action}}
+</view>
+
+<view class="data" scroll-y>
+活动时间：{{thecontent.data}}
+</view>
+
+<view class="content" scroll-y>
+{{thecontent.content}}
+</view>
+
+
+<image src='img/000.png' class='goTop' hidden='{{!floorstatus}}' bindtap="goTop"></image>
+</view>

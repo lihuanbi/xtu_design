@@ -1,0 +1,79 @@
+/* pages/view/view.wxss */
+view{
+  display: flex;
+}
+
+.cont{
+height: 100%;
+width: 80%;
+display: flex;
+flex-direction: column;
+
+padding: 20rpx 0;
+box-sizing: border-box;
+
+margin-left: 10%;
+padding-bottom: 20px;
+/* 
+     align-items: center;  
+    vertical-align: center; /**垂直居中
+    justify-content: center; *内容居中 */
+
+}
+
+.thetext{
+width: 99%;
+height: 20px; 
+line-height: 20px;
+padding: 18px;
+float: left;
+ font-size:20px;
+
+ opacity: 0.8;
+
+ /* margin-left: 28px; */
+ letter-spacing: 10rpx;
+ box-shadow: 0 0 30rpx 0rpx rgb(151, 178, 182);
+}
+.img{
+  width: 100%;
+  height: 100px;
+  display: flex;
+  /* box-shadow: 0rpx 10rpx 50rpx 10rpx rgba(85, 85, 85, 0.10); */
+  margin-bottom: 30rpx;
+}
+
+/* union */
+.union{
+  height: 40px;
+}
+
+.unionimg{
+  width: 55rpx;
+  height: 55rpx;
+
+  padding-right: 20rpx;
+  padding-bottom: 20rpx;
+}
+
+.uniontxt{
+  height: 20px;
+  margin-left: 10rpx;
+  font-size: 14px;
+  color: #afa8a8;
+  line-height: 30px;
+}
+
+.action,.data,.content{
+  margin: 10rpx;
+  padding-top: 20rpx;
+  padding-left: 18rpx ;
+  border-left: 5rpx solid #c9c1c1;
+}
+.action,.data{
+  font-size: 15px;
+  color: #bebcbc;
+}
+.content{
+  padding-top:0 ;
+}

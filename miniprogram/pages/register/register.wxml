@@ -1,0 +1,15 @@
+<!--pages/register/register.wxml-->
+<form>
+<view class="item">
+  <input type="text" name="nickname"  placeholder="请设置昵称" placeholder-class="center" bindinput="getNickname"></input>
+  </view>
+  <view class="item">
+  <input type="text" name="number"  placeholder="请输入学号" placeholder-class="center" bindinput="getNum"></input>
+  </view>
+   <view class="item">
+  <input type="text" name="password" password="true" placeholder="请设置密码" placeholder-class="center" bindinput="getPsw"></input>
+  </view>
+  <button type="primary" bindtap="zhuce" >注册</button>
+</form>
+
+
